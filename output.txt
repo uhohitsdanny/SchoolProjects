@@ -1,0 +1,25 @@
+
+CPSC 335-x - Programming Assignment #1
+The alternating disks problem: left-to-right algorithm
+Enter the number of single color disks (light or dark)
+4
+
+Initial configuration
+dldldldl
+After moving darker ones to the right
+lllldddd
+Number of swaps is 10
+계속하려면 아무 키나 누르십시오 . . .
+
+
+
+CPSC 335-x - Programming Assignment #1
+The alternating disks problem: lawnmower algorithm
+Enter the number of single color disks (light or dark)
+4
+Initial configuration
+dldldldl
+After moving darker ones to the right
+lllldddd
+Number of swaps is 10
+계속하려면 아무 키나 누르십시오 . . .
