@@ -1,0 +1,18 @@
+CPSC 335-x - Programming Assignment #3
+Rectilinear traveling salesperson problem: exhaustive optimization algorithm
+Enter the number of vertices (>2)
+4
+Enter the points; make sure that they are distinct
+x=2
+y=0
+x=1
+y=1
+x=3
+y=1
+x=0.1
+y=0
+The Hamiltonian cycle of the minimum length
+(2, 0) (3, 1) (1, 1) (0.1, 0) (2, 0)
+Minimum length is 7.8
+elapsed time: 0 seconds
+계속하려면 아무 키나 누르십시오 . . .
