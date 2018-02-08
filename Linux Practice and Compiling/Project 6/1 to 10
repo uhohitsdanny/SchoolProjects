@@ -1,0 +1,48 @@
+1. Ifconfig
+
+2. Sudo ifconfig 192.168.1.15 <--- use different number like 192.168.1.13
+
+3. Ping 76.91.236.48 <---this is ipaddress of my other laptop, use another laptop's ipaddress or holiday will know it's a copy
+
+Ping www.ubuntu.com
+
+4.xdg-open /etc/network/interfaces <-- screenshot result
+
+5.Nslookup [domain name]
+
+6.sudo apt-get install ifstat
+	ifstat <-- Ctrl C to stop
+	download something
+	ifstat <---- use again while you download something
+	screen shot 
+
+7.sudo apt-get install nload
+	nload [network interface name]  <-- use ifconfig to see your network interfaces
+
+8. sudo apt-get install python-pip
+sudo pip install speedtest-cli
+speedtest-cli --list
+speedtest-cli --bytes --server [server #] <-- choose any servernumber from list
+
+9. go to website given on packet.  go to shields up.  click the all service ports
+
+10. use ifconfig or
+	ip addr show
+
+	then google whatsmyip
+	screenshot
+
+11.sudo apt-get install traceroute
+traceroute 137.65.1.1
+traceroute www.ubuntu.org
+
+12. Sudo apt-get install iftop
+Sudo iftop -i wlan0
+
+13. sudo apt-get install nmap
+nmap -sV www.amazon.com
+
+
+
+
+

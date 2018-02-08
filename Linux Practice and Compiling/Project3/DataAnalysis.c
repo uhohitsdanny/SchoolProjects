@@ -1,0 +1,53 @@
+//Daniel Navarro
+//danielnavarro71@yahoo.com
+//CPSC 254
+//Project 3
+//Due: March 21, 2016
+//DataAnalysis.c
+//Analyze data from the array and output the statistics.
+//gcc -c -m64 -Wall -o DataAnalysis.o DataAnalysis.c
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+//C++ prototypes
+void displayData(float original[], float datas[], int length);
+float Harmonic_Mean(float datas[], int length);
+float Compute_Median(float datas[], int length);
+//C prototypes
+float Get_Data(float original[], float datas[], int* length);
+float computeMean(float datas[], int length);
+void sortArray(float datas[], int length);
+//Asm prototype
+float sum(float datas[], int length);
+
+int main(int argc, char *argv[])
+{
+	int i;
+	int length = 1;
+	float arithmeticmean, harmonicmean, median, original[100] = {0}, datas[100] = {0};
+	Get_Data(original, datas, &length);
+
+	printf("Thank you, the data you entered are: \n");
+	for(i=0; i<length; ++i)
+	{
+		printf("%f \n", original[i]);
+	}
+	sortArray(datas, length);
+	//total = sum(datas,length);
+	arithmeticmean = computeMean(datas,length);
+	median = Compute_Median(datas, length);
+	harmonicmean = Harmonic_Mean(datas, length);
+
+	printf("The following statistics were computed: \n");
+	//printf("\nSum: %f\n", total);
+	printf("Arithmetic Mean %f\n", arithmeticmean);
+	printf("Median %f\n", median);
+	printf("Harmonic Mean %f\n", harmonicmean);
+	displayData(original, datas, length);
+	printf("\nThank you for using this program.  Enjoy your statistics.\n"); 
+	
+	system("pause");
+	return 0;
+}
