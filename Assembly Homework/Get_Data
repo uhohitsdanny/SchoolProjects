@@ -1,0 +1,11 @@
+void Get_Data(float data[], float original[], int* length)
+{
+    int count = 0;
+    printf("Enter data and Ctrl + D when you're done(Ctrl + Z for Windows): \n");
+    while (scanf_s("%f", &data[count]) != EOF)
+    {
+		original[count] = data[count];
+        count++;
+    }
+	*length = count;
+}

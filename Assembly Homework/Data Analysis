@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+
+int main(){
+  int length = 1;
+  double data;
+  char answer = 'y';
+  double* datas = new double[length];
+  
+  while(answer == 'y')
+  {
+    printf( "Enter your data: " );
+    scanf( "%f", datas[length-1]);
+    //datas[length-1] = data;
+    
+    printf( "More Data? (Y/N)" ) endl;
+    scanf("%c", &answer);
+    if(answer == 'y')
+      {
+        Get_Data(datas, length);
+      }
+  }
+  return 0;
+}

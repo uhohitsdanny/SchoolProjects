@@ -1,0 +1,45 @@
+//BubbleSort?
+void sortArray(double*& data, int& length)
+{
+  double temp = 0.0;
+  int begin = 0;
+  while(begin != length-2)
+  {
+      for(int i = begin; i < length-1; i++)
+      {
+        if(data[i] > data[i+1])
+        { 
+          temp = data[i];
+          data[i] = data[i+1];
+          data[i+1] = temp;
+          i = i + 1;
+        }
+      }
+    begin++;
+  }
+}
+
+/void sortArray(double*& data, int& length)
+{
+  double temp = 0.0;
+  int begin = 0;
+  int save_i = 0;
+ 
+
+  while(begin < length-1)
+  {
+      double min = data[begin];
+      for(int i = begin + 1; i < length; i++)
+      {
+        if(min > data[i])
+        { 
+          min = data[i];
+          save_i = i;
+        }
+      }
+      temp = data[begin];
+      data[begin] = data[save_i];
+      data[save_i] = temp;
+    begin++;
+  }
+}

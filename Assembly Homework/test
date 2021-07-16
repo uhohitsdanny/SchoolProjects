@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include <iostream>
+#include <string>
+using namespace std;
+
+void Get_Data(double*& data, int& length)
+{
+    double* newarray = new double[length + 1]();
+    for (int i = 0; i < length; i++)
+        {
+            newarray[i] = data[i];
+        }
+        length++;
+        delete[] data;
+        data = newarray;
+}
+void displayData(double*& data, int& length)
+{
+  for (int i = 0; i < length; i++)
+  {
+    cout << data[i] << " ";
+  }
+  cout << endl;
+  cout << length << endl;
+}
+void sortArray(double*& data, int& length)
+{
+  double temp = 0.0;
+  int begin = 0;
+  int save_i = 0;
+ 
+
+  while(begin < length-1)
+  {
+      double min = data[begin];
+      for(int i = begin + 1; i < length-1; i++)
+      {
+        if(min > data[i])
+        { 
+          min = data[i];
+          save_i = i;
+        }
+      }
+      temp = data[begin];
+      data[begin] = data[save_i];
+      data[save_i] = temp;
+    begin++;
+  }
+}
+
+int main(){
+  int length = 1;
+  string answer = "y";
+  double* datas = new double[length];
+  
+  while(answer == "y")
+  {
+    cout << "Enter your data: " << endl;
+    cin >> datas[length-1];
+    cout << "More Data? (Y/N)" << endl;
+    cin >> answer;
+    if(answer == "y")
+      {
+        Get_Data(datas, length);
+      }
+  }
+ sortArray(datas, length);
+ displayData(datas, length);
+ 
+
+  return 0;
+}
